@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>陈逍个人简介介绍网站</title>
+    <style>
+        table {
+            width:100%;
+            height:600px;
+            border-collapse: collapse;
+        }
+
+        .top {
+            background-color: rgb(58, 139, 255);
+            color: white;
+            font-size: 40px;
+            text-align: center;
+           
+        }
+
+        .left_box {
+            display: flex; /* 使用弹性盒子布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            width: 200px;
+            background-color: rgb(77, 88, 181);
+            overflow-y: auto;
+            text-align: center;
+            flex-wrap: wrap; /* 添加这一行代码 */
+        }
+
+        .left_option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 90%;
+            background-color: rgb(91, 104, 214);
+            color: white;
+            text-align: center;
+            margin: 10px auto;
+            user-select:none;
+        }
+            .left_option:hover {
+                background-color: rgb(79, 90, 185);
+            }
+
+        .main_background {
+            width: 100%;
+            height: 550px;                            
+            position:relative;
+            z-index:0;
+        }
+
+        .backgroundImg{
+            width:100%;
+            height:550px;
+            opacity:0.5;
+        }
+
+        .overlay-image {
+            position: relative;
+            width:200px;
+            height:200px;
+            top: -100%;
+            right: -100%;
+            transform:translateX(-100%);
+            z-index: 1;
+        }
+        
+        
+    </style>
+    <script>
+        function turnOtherPage(what) {
+            var what = what;
+            if (what == 1) {
+                window.open("https://www.4399.com/", "_blank");
+            }
+            else if (what == 2) {
+                window.open("https://pvp.qq.com/", "_blank");
+            }
+            else if (what == 3) {
+                window.open("http://www.quyixian.com/", "_blank");
+            }
+            else if (what == 4) {
+                window.open("https://cv.chaoxing.com/backSchool/toLogin", "_blank");
+            }
+            else if (what == 5) {
+                window.open("https://www.pig66.com/2018/525_0828/17126513.html", "_blank");
+            }
+            else if (what == 6) {
+                window.open("https://baike.baidu.com/item/%E6%89%93%E5%B7%A5%E6%98%AF%E4%B8%8D%E5%8F%AF%E8%83%BD%E6%89%93%E5%B7%A5%E7%9A%84/22245706", "_blank");
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2" class="top " height="50"  ><h1>陈逍个人介绍</h1></td>
+        </tr>
+        <tr>
+            <td class="left_box" height="550" width="10%">
+                <div class="left_option" onclick="turnOtherPage(1)" >小学生涯</div>
+                <div class="left_option" onclick="turnOtherPage(2)">初中生涯</div>
+                <div class="left_option" onclick="turnOtherPage(3)">高中生涯</div>
+                <div class="left_option" onclick="turnOtherPage(4)">大学生涯</div>
+                <div class="left_option" onclick="turnOtherPage(5)">科学成就</div>
+                <div class="left_option" onclick="turnOtherPage(6)">盛世名言</div>
+            </td>
+            <td width="90%">
+                <div class="main_background">
+                    <img src="sky.jpg" class="backgroundImg" />
+                    <img src="1.jpg" class="overlay-image" />
+                </div>
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
